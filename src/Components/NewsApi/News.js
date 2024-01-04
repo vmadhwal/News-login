@@ -13,7 +13,11 @@ const News = () => {
     fetch(url)
       .then((response) => response.json())
       .then((data) => {
-        setArticles(data.articles);
+        if (data.articles) {
+          setArticles(data.articles);
+        } else {
+          setError(new Error('Data structure is not as expected'));
+        }
         setLoading(false);
       })
       .catch((error) => {
