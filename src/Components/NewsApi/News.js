@@ -8,7 +8,7 @@ const News = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let url = 'https://newsapi.org/v2/top-headlines?country=us&apiKey=136f3e3c521c4ff89771649c8b2de175';
+    let url = 'http://newsapi.org/v2/top-headlines?country=us&apiKey=136f3e3c521c4ff89771649c8b2de175';
 
     fetch(url)
       .then((response) => response.json())
