@@ -19,7 +19,7 @@ export const Home = (props) => {
       </ul>
      
     </nav>
-    <h2>{props.name?<News/>:"Login Please"}</h2>
+    <News/>
     
     </div>
   )
